@@ -1,0 +1,119 @@
+/* Product Details Page Styling */
+
+.product-page {
+    padding-top: 8rem;
+    background: #fff;
+    min-height: 100vh;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+    transition: all 0.3s ease;
+}
+
+.product-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-bottom: 2px solid #f3f4f6;
+}
+
+.product-content {
+    padding: 2rem;
+}
+
+.product-content h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.product-content p {
+    font-size: 1.1rem;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.image-overlay {
+    background: #f9fafb;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.overlay-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #16a34a;
+    margin-bottom: 0.5rem;
+}
+
+.overlay-content p {
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+.product-features {
+    margin-top: 2rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.product-features li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: #374151;
+}
+
+.product-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.btn2 {
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary2 {
+    background-color: #16a34a;
+    color: white;
+}
+
+.btn-primary2:hover {
+    background-color: #15803d;
+    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-secondary2 {
+    background: transparent;
+    border: 2px solid #16a34a;
+    color: #16a34a;
+}
+
+.btn-secondary2:hover {
+    background-color: #16a34a;
+    color: white;
+    transform: translateY(-2px);
+}

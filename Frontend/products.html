@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details | Sri Elumalai Andavar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="product-details.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">🚜</div>
+                <div class="logo-text">
+                    <h1>Sri Elumalai Andavar</h1>
+                    <p>Dairy Machineries</p>
+                </div>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#products" class="nav-link">Products</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                 <li><a href="#" class="nav-link" id="login">Login</a></li> 
+                <li><a href="index.html#contact" class="nav-cta">Get Quote</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details Section -->
+    <section class="products" style="padding-top: 8rem">
+        <div class="container">
+            <div class="product-card" style="max-width: 900px; margin: 0 auto">
+                <div class="product-image">
+                    <img id="product-image" src="" alt="Product Image" />
+                </div>
+                <div class="product-content">
+                    <h3 id="product-name">Loading...</h3>
+                    <p id="product-description">Loading product description...</p>
+                    <ul id="product-features" class="product-features"></ul>
+
+                    <div class="hero-buttons">
+                        <button class="btn2 btn-primary2" onclick="requestQuote()">
+                            Request Quote
+                        </button>
+                        <button class="btn2 btn-secondary2" onclick="goBack()">
+                            Go Back
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🚜</div>
+                        <div class="logo-text">
+                            <h3>Sri Elumalai Andavar</h3>
+                            <p>Dairy Machineries</p>
+                        </div>
+                    </div>
+                    <p>Empowering farmers with reliable, efficient, and innovative agricultural machinery solutions across Tamil Nadu and beyond.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Products</h4>
+                    <ul>
+                        <li><a href="index.html#products">Agricultural Sprayers</a></li>
+                        <li><a href="index.html#products">Power Tillers</a></li>
+                        <li><a href="index.html#products">Chaff Cutters</a></li>
+                        <li><a href="index.html#products">Milking Machines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Free Delivery</a></li>
+                        <li><a href="index.html#services">Installation Support</a></li>
+                        <li><a href="index.html#services">Maintenance Service</a></li>
+                        <li><a href="index.html#services">Customer Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <p>📍 Tiruvannamalai, Tamil Nadu</p>
+                        <p>📞 +91 98765 43210</p>
+                        <p>✉️ info@srieumalaiandavar.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sri Elumalai Andavar Dairy Machineries. All rights reserved. | Trusted Machinery for Smart Farming</p>
+            </div>
+        </div>
+    </footer>
+    <script src="products.js"></script>
+</body>
+
+</html>

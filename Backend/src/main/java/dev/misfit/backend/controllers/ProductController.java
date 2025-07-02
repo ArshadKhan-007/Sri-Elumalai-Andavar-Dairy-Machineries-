@@ -21,7 +21,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @PostMapping
+    @PostMapping("/add")
     public ProductResponse saveProduct(@RequestPart("products") ProductRequest request,
                                        @RequestPart("files") MultipartFile file) throws IOException {
         return productService.saveProduct(request, file);

@@ -57,14 +57,25 @@ function whatsapp() {
   var product = document.getElementById("product").value;
   var message = document.getElementById("message").value;
 
-  var whatsappurl = "https://wa.me/7320092809?text="
-  + "Name: " + name + "%0a"
-  + "Email: " + email + "%0a"
-  + "Mobile No.: " + phone + "%0a"
-  + "Product: " + product + "%0a"
-  + "Message: " + message + "%0a"
+  var whatsappurl =
+    "https://wa.me/7320092809?text=" +
+    "Name: " +
+    name +
+    "%0a" +
+    "Email: " +
+    email +
+    "%0a" +
+    "Mobile No.: " +
+    phone +
+    "%0a" +
+    "Product: " +
+    product +
+    "%0a" +
+    "Message: " +
+    message +
+    "%0a";
 
-  window.open(whatsappurl,"_blank").focus();
+  window.open(whatsappurl, "_blank").focus();
 }
 
 // Animate elements on scroll
@@ -134,4 +145,61 @@ loadProducts();
 // Product Details page
 async function viewDetails(productId) {
   window.location.href = `products.html?id=${productId}`;
+}
+
+// Jwt token
+const token = localStorage.getItem("token");
+
+const profileBtn = document.getElementById("profile");
+const dropdownMenu = document.getElementById("dropdown-menu");
+const login = document.getElementById("login");
+const profile = document.querySelector(".profileHide");
+
+if (token) {
+  login.classList.add("hidden");
+  profile.classList.remove("hidden")
+}
+
+profileBtn.addEventListener("click", () => {
+  dropdownMenu.classList.toggle("hidden");
+});
+
+document.addEventListener("click", (e) => {
+  if (!profileBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+    dropdownMenu.classList.add("hidden");
+  }
+});
+
+const userDetails = parseJwt(token);
+console.log(userDetails);
+
+function parseJwt(token) {
+  if (!token || token.split('.').length !== 3) {
+    return null;
+  }
+
+  const base64Url = token.split('.')[1];
+  const base64 = base64Url
+    .replace(/-/g, '+')
+    .replace(/_/g, '/');
+
+  const padded = base64.padEnd(base64.length + (4 - base64.length % 4) % 4, '=');
+
+  try {
+    const jsonPayload = decodeURIComponent(
+      atob(padded)
+        .split('')
+        .map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
+        .join('')
+    );
+
+    return JSON.parse(jsonPayload);
+  } catch (e) {
+    console.error("JWT parse error:", e.message);
+    return null;
+  }
+}
+
+function logout() {
+  localStorage.removeItem("token");
 }
